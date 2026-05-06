@@ -25,16 +25,26 @@ int main()
         cin >> a >> b;
 
         adj_mat[a][b] = 1;
-        adj_mat[b][a] = 1;
+        adj_mat[b][a] = 1; // Undirected graph
     }
 
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            cout << adj_mat[i][j] << " ";
-        }
-        cout << endl;
-    }
+    // for (int i = 0; i < n; i++)
+    // {
+    //     for (int j = 0; j < n; j++)
+    //     {
+    //         cout << adj_mat[i][j] << " ";
+    //     }
+    //     cout << endl;
+    // }
+
+    // Check if two nodes are connected
+
+    int u, v;
+    cin >> u >> v;
+
+    if (adj_mat[u][v] == 1)
+        cout << "They are connected.";
+    else
+        cout << "They are not connected.";
     return 0;
 }
